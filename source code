@@ -1,0 +1,14 @@
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  
+  var counter = 0;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] - num < 0){
+      counter++;
+      //counter is increased by 1 everytime the result of subtraction is less then 0. This means that counter is actually keeping the count of position index of where the num would fit in.
+    }
+  }
+  return counter;
+}
+
+getIndexToIns([10, 20, 30, 40, 50], 30);
